@@ -1,0 +1,5 @@
+enabled: true
+"*": em
+"**": strong
+"_": em
+"__": u

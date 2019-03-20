@@ -1,0 +1,14 @@
+en:
+  PLUGINS:
+    MARKDOWN_UNDERLINE:
+      "*": HTML tag to replace <code>*</code>
+      "**": HTML tag to replace <code>**</code>
+      "_": HTML tag to replace <code>_</code>
+      "__": HTML tag to replace <code>__</code>
+fr:
+  PLUGINS:
+    MARKDOWN_UNDERLINE:
+      "*": Tag HTML qui remplacera <code>*</code>
+      "**": Tag HTML qui remplacera <code>**</code>
+      "_": Tag HTML qui remplacera <code>_</code>
+      "__": Tag HTML qui remplacera <code>__</code>

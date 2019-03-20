@@ -8,7 +8,7 @@ Overrides the default behavior to convert double underscore `__` inline blocks t
 
 Anyways, it's just another tag for your CSS to tinker with, you don't have to underline.
 
-The **Markdown Underline** Plugin is for [Grav CMS](http://github.com/getgrav/grav). Use __double underscore__ create `<u>` tags.
+The **Markdown Underline** Plugin is for [Grav CMS](http://github.com/getgrav/grav).
 
 ## Installation
 
@@ -52,12 +52,20 @@ Note that if you use the admin plugin, a file with your configuration, and named
 
 ## Usage
 
+With the default configuration
+
+```yaml
+'*': em
+'**': strong
+_: em
+__: u
+```
+
+When you write
+
     This will be __underlined text__.
 
-yields
+it will yield
 
     This will be <u>underlined text</u>.
 
-## Future
-
-- Perhaps evolve into a plugin that allows individual overriding of `*`, `**`, `_`, `__` etc.

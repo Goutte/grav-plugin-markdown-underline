@@ -69,10 +69,9 @@ class MarkdownUnderlinePlugin extends Plugin
         $mu_config = $config->get('plugins.markdown-underline');
 
         // This feature depends on the page being provided in onMarkdownInitialized event.
-        // There may be a PR for this in the future. Not sure about the implications.
+        // See PR https://github.com/getgrav/grav/pull/2418
         if (isset($event['page'])) {
             $config = $this->mergeConfig($event['page']);
-            // Merging works but changes paths
             $mu_config = array(
                 '*' => $config->get('*'),
                 '**' => $config->get('**'),
@@ -121,7 +120,6 @@ class MarkdownUnderlinePlugin extends Plugin
                     'text' => $matches[1],
                 ),
             );
-
 
         };
 

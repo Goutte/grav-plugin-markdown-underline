@@ -1,6 +1,6 @@
 # Markdown Underline Plugin
 
-Overrides the default behavior to convert double underscore `__` inline blocks to underline `<u>` instead of `<strong>`.
+Overrides the default behavior to convert for example double underscore `__` inline blocks to underline `<u>` instead of `<strong>`.
 
 **Use with caution, as underlining makes text harder to read.**
 
@@ -15,8 +15,6 @@ The **Markdown Underline** Plugin is for [Grav CMS](http://github.com/getgrav/gr
 Installing the Markdown Underline plugin can be done in one of two ways. The GPM (Grav Package Manager) installation method enables you to quickly and easily install the plugin with a simple terminal command, while the manual method enables you to do so via a zip file.
 
 ### GPM Installation (Preferred)
-
-!! NOT SUBMITTED YET
 
 The simplest way to install this plugin is via the [Grav Package Manager (GPM)](http://learn.getgrav.org/advanced/grav-gpm) through your system's terminal (also called the command line).  From the root of your Grav install type:
 
@@ -46,22 +44,17 @@ Here is the default configuration and an explanation of available options:
 
 ```yaml
 enabled: true
+'*':  em
+'**': strong
+'_':  em
+'__': u
 ```
 
-Note that if you use the admin plugin, a file with your configuration, and named markdown-underline.yaml will be saved in the `user/config/plugins/` folder once the configuration is saved in the admin.
+Note that if you use the admin plugin, a file with your configuration, and named `markdown-underline.yaml` will be saved in the `user/config/plugins/` directory once the configuration is saved in the admin.
 
 ## Usage
 
-With the default configuration
-
-```yaml
-'*': em
-'**': strong
-_: em
-__: u
-```
-
-When you write
+With the default configuration, when you write
 
     This will be __underlined text__.
 
@@ -69,3 +62,9 @@ it will yield
 
     This will be <u>underlined text</u>.
 
+You can also override the configuration in a page's frontmatter like so:
+
+```yaml
+markdown-underline:
+  "__": i
+```
